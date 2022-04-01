@@ -41,8 +41,7 @@ def telegram_bot(token):
 
                 for article in articles:
                     article_price_with_discount = article.find("div", class_="price-discount").find("span").text.strip()
-                    article_price_with_out_discount = article.find("div", class_="price-discount").find("span",
-                                                                                                        class_="price-regular").text.strip()
+                    article_price_with_out_discount = article.find("div", class_="price-discount").find("span", class_="price-regular").text.strip()
                     article_name = article.find("div", class_="image-cont").find("img").get("alt")
                     article_date = article.find("div", class_="item-date").text.strip()
                     bot.send_message(
